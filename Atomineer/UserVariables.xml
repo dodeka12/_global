@@ -1,0 +1,61 @@
+<UserVariables>
+  <!--
+		Set any desired user %variables% in this section. These can be output in description text or used
+		in subsequent variable definitions using the %varName% syntax.
+
+		Full documentation can be found here:
+			http://www.atomineerutils.com/rulesguide.php
+		-->
+  <Variable name="company" ifSet="false" value="Christian Perwass" />
+  <Variable name="copyright" ifSet="false" value="Copyright (c) %year% by %company%. " />
+  <Variable name="useremail" ifSet="false" value="christian@perwass.de" />
+  <!--
+		Special variables
+		For language translations, or simply to adjust the output of Atomineer, fill in the
+		following variables (and check the rules that use them below):
+		-->
+  <Variable name="property-getonly" ifSet="false" value="Gets" />
+  <Variable name="property-setonly" ifSet="false" value="Sets" />
+  <Variable name="property-getset" ifSet="false" value="Gets or sets" />
+  <Variable name="indexer-getonly" ifSet="false" value="get" />
+  <Variable name="indexer-setonly" ifSet="false" value="set" />
+  <Variable name="indexer-getset" ifSet="false" value="get or set" />
+  <!-- Text to use for Optional parameters. Note that stylecop compatibility disables this feature -->
+  <Variable name="param-optional" ifSet="false" value="(Optional)" />
+  <!-- Names for true/false/null text - change this to your preferred style,
+				e.g. TRUE			= "TRUE"
+					 <c>true</c>	= "&lt;c&gt;true&lt;/c&gt;"
+					 etc
+		-->
+  <Variable name="true" ifSet="false" value="true" />
+  <Variable name="false" ifSet="false" value="false" />
+  <Variable name="null" ifSet="false" value="null" />
+  <Variable name="nullptr" ifSet="false" value="nullptr" />
+  <!--
+		Options that control the output of the rules
+		The options below are:
+			stylecop			  - set to true to change Atomineer outputs to be StyleCop-compliant.
+
+			docPrimaryBaseWithSee - set to true to document the primary base class (only) as a
+								    <see cref="Fully.Qualified.BaseClass"/> ref (...where possible)
+			docBasesWithSee		  - set to true to document ALL base classes and/or interfaces as
+								    <see cref="Fully.Qualified.BaseClass"/> refs (...where possible)
+			docOverridesWithSee	  - set to true to document overrides (where possible) as
+								    <see cref="Fully.Qualified.OverrideName(Params)"/> instead of copying base-class
+								    documentation or generating auto-doc text.
+								    (Note that you also need to disable duplication of base documentation in the
+								    preferences to allow these rules to be applied for overrides).
+			docUseAttributes	  - set to true to use Attribute meta-data when generating documentation
+
+			suppressInOut		  - set to true to suppress the addition of [in], [out], [in,out] to paramter
+									descriptions. Note that this overrides %alwaysAddInForParams%
+			alwaysAddInForParams  - set to true to always add [in] for parameters that are not [out] or [in,out]
+		-->
+  <Variable name="stylecop" ifSet="false" value="false" hideInUI="y" />
+  <Variable name="docBasesWithSee" ifSet="false" value="false" hideInUI="y" />
+  <Variable name="docPrimaryBaseWithSee" ifSet="false" value="false" hideInUI="y" />
+  <Variable name="docOverridesWithSee" ifSet="false" value="false" hideInUI="y" />
+  <Variable name="docUseAttributes" ifSet="false" value="true" hideInUI="y" />
+  <Variable name="suppressInOut" ifSet="false" value="false" />
+  <Variable name="alwaysAddInForParams" ifSet="false" value="false" />
+</UserVariables>

@@ -1,0 +1,39 @@
+﻿<File>
+  <!--
+		AutoDoc rules
+		=============
+
+		For each documentation entry that needs to be generated, Atomineer executes an appropriate
+		section of the rules in this AutoDoc section (e.g. for a parameter, the <Parameters> section
+		is executed). Execution stops when a match is found and a documentation result is returned.
+
+		Full documentation can be found here:
+			http://www.atomineerutils.com/rulesguide.php
+	-->
+	<!-- Rules for generating auto-documentation text describing a file. The results of
+		 executing this rule are placed in %fileDescription% when adding file-header
+		 comments.
+
+		 NOTE - If you wish to change the layout and content of file headers themselves,
+		 then you need to edit the 'Block Templates (DocXML)' or 'Block Templates (Doxygen)'
+		 rather than this file.
+
+		 Full documentation can be found here:
+			http://www.atomineerutils.com/rulesguide.php
+
+		 Note that you can delete all the examples, and as long as this section does not
+		 end with a <Set> command, Atomineer will "fall through" your custom rules and 
+		 use its defaults if your rules do not supply any documentation text.
+	 -->
+	<If extension=".c" desc="" />
+
+	<If sNameRaw="I #" desc="Declares the %name% interface" />
+
+	<If extension=".h,.hpp" continue="y" desc="Declares the " />
+	<If extension=".cs,.cpp,.java" continue="y" desc="Implements the " />
+
+	<If sName="# dialog,# dialogue" desc="%match:noPrefix:LCase% Dialog" />
+	<If sName="# form,# window" desc="%match:noPrefix:LCase% Windows Form" />
+
+	<Set desc="%sname:noPrefix:LCase% class" />
+</File>

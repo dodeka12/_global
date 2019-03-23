@@ -1,0 +1,23 @@
+﻿<Namespace>
+  <!--
+		AutoDoc rules
+		=============
+
+		For each documentation entry that needs to be generated, Atomineer executes an appropriate
+		section of the rules in this AutoDoc section (e.g. for a parameter, the <Parameters> section
+		is executed). Execution stops when a match is found and a documentation result is returned.
+
+		Full documentation can be found here:
+			http://www.atomineerutils.com/rulesguide.php
+		-->
+			<!-- Rules for generating auto-documentation for namespace comments. The results of
+				 executing this rule are placed in %namespaceDescription% when adding file comments.
+
+				 Full documentation can be found here:
+					http://www.atomineerutils.com/rulesguide.php
+
+				 Note that you can delete all the examples, and as long as this section does not
+				 end with a <Set> command, Atomineer will "fall through" your custom rules and 
+				 use its defaults if your rules do not supply any documentation text.
+			 -->
+		</Namespace>

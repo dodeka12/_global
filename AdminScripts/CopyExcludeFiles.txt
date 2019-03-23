@@ -1,0 +1,5 @@
+stdafx.h
+targetver.h
+resource.h
+*x86.dll.metagen
+*x64.dll.metagen

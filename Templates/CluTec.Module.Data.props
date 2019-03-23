@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <CtModName>Module</CtModName>
+    <CtModVerA>1</CtModVerA>
+    <CtModVerB>0</CtModVerB>
+    <CtModVerC>0</CtModVerC>
+    <CtModVerD>0</CtModVerD>
+    <CtDepVer_Global>1.0</CtDepVer_Global>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemDefinitionGroup />
+  <ItemGroup>
+    <BuildMacro Include="CtModName">
+      <Value>$(CtModName)</Value>
+    </BuildMacro>
+    <BuildMacro Include="CtModVerA">
+      <Value>$(CtModVerA)</Value>
+    </BuildMacro>
+    <BuildMacro Include="CtModVerB">
+      <Value>$(CtModVerB)</Value>
+    </BuildMacro>
+    <BuildMacro Include="CtModVerC">
+      <Value>$(CtModVerC)</Value>
+    </BuildMacro>
+    <BuildMacro Include="CtModVerD">
+      <Value>$(CtModVerD)</Value>
+    </BuildMacro>
+    <BuildMacro Include="CtDepVer_Global">
+      <Value>$(CtDepVer_Global)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

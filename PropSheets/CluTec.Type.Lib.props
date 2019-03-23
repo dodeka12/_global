@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(SolutionDir)CluTec.Solution.Data.props" Condition="exists('$(SolutionDir)CluTec.Solution.Data.props')" />
+	<Import Project="$(ProjectDir)..\CluTec.Module.Data.props" />
+    <Import Project=".\CluTec.Common.Data.props" />
+    <Import Project=".\CluTec.Type.Lib.Data.props" />
+	<Import Project="$(ProjectDir)CluTec.Project.Lib.Macros.props" Condition="exists('$(ProjectDir)CluTec.Project.Lib.Macros.props')"/>
+	<Import Project="$(ProjectDir)..\CluTec.Module.Macros.props" Condition="exists('$(ProjectDir)..\CluTec.Module.Macros.props')"/>
+    <Import Project="$(SolutionDir)CluTec.Solution.Macros.props" Condition="exists('$(SolutionDir)CluTec.Solution.Macros.props')" />
+    <Import Project=".\CluTec.Common.Macros.props" />
+    <Import Project=".\CluTec.Common.Settings.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>$(CtDistLibDir)</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile />
+    <Link />
+  </ItemDefinitionGroup>
+  <ItemGroup />
+</Project>

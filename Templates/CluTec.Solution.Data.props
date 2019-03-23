@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <CtSlnName>Solution</CtSlnName>
+    <CtSlnVerA>1</CtSlnVerA>
+    <CtSlnVerB>0</CtSlnVerB>
+    <CtSlnVerC>0</CtSlnVerC>
+    <CtSlnVerD>0</CtSlnVerD>
+    <CtDepVer_Global>1.0</CtDepVer_Global>
+    <CtSlnVerShort>$(CtSlnVerA).$(CtSlnVerB)</CtSlnVerShort>
+    <CtSlnVerLong>$(CtSlnVerA).$(CtSlnVerB).$(CtSlnVerC).$(CtSlnVerD)</CtSlnVerLong>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemDefinitionGroup />
+  <ItemGroup>
+    <BuildMacro Include="CtSlnName">
+      <Value>$(CtSlnName)</Value>
+    </BuildMacro>
+    <BuildMacro Include="CtSlnVerA">
+      <Value>$(CtSlnVerA)</Value>
+    </BuildMacro>
+    <BuildMacro Include="CtSlnVerB">
+      <Value>$(CtSlnVerB)</Value>
+    </BuildMacro>
+    <BuildMacro Include="CtSlnVerC">
+      <Value>$(CtSlnVerC)</Value>
+    </BuildMacro>
+    <BuildMacro Include="CtSlnVerD">
+      <Value>$(CtSlnVerD)</Value>
+    </BuildMacro>
+    <BuildMacro Include="CtDepVer_Global">
+      <Value>$(CtDepVer_Global)</Value>
+    </BuildMacro>
+    <BuildMacro Include="CtSlnVerShort">
+      <Value>$(CtSlnVerShort)</Value>
+    </BuildMacro>
+    <BuildMacro Include="CtSlnVerLong">
+      <Value>$(CtSlnVerLong)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

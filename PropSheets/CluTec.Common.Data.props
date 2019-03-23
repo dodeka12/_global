@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <CtIsRTM Condition="'$(Configuration)'=='Debug'">false</CtIsRTM>
+    <CtIsRTM Condition="'$(Configuration)'=='Release'">false</CtIsRTM>
+    <CtIsRTM Condition="'$(Configuration)'=='RTM'">true</CtIsRTM>
+    <CtGenDebugInfo Condition="'$(Configuration)'=='Debug'">true</CtGenDebugInfo>
+    <CtGenDebugInfo Condition="'$(Configuration)'=='Release'">true</CtGenDebugInfo>
+    <CtGenDebugInfo Condition="'$(Configuration)'=='RTM'">false</CtGenDebugInfo>
+    <CtDistDir>$(SolutionDir)_dist\</CtDistDir>
+    <CtDistIncDir>$(CtDistDir)$(Configuration)\include\</CtDistIncDir>
+    <CtDistLibDir>$(CtDistDir)$(Configuration)\lib.$(PlatformTarget)\</CtDistLibDir>
+    <CtDistBinDir>$(CtDistDir)$(Configuration)\bin.$(PlatformTarget)\</CtDistBinDir>
+    <CtDistSymDir>$(CtDistDir)_symbol\$(Configuration).$(PlatformTarget)\</CtDistSymDir>
+    <CtDistInterDir>$(CtDistDir)_intermediate\$(Configuration).$(PlatformTarget)\$(TargetName)\</CtDistInterDir>
+    <CtModVerShort>$(CtModVerA).$(CtModVerB)</CtModVerShort>
+    <CtModVerLong>$(CtModVerA).$(CtModVerB).$(CtModVerC).$(CtModVerD)</CtModVerLong>
+    <CtProjectDir>$(ProjectDir)</CtProjectDir>
+    <CtHeaderDir>$(ProjectDir)</CtHeaderDir>
+    <CtGlobalDir>$(SolutionDir)_global.$(CtDepVer_Global)\</CtGlobalDir>
+    <CtTargetName>$(ProjectName).$(CtModVerShort)</CtTargetName>
+    <CtLib>$(CtModVerShort).lib</CtLib>
+    <CtImpLib>$(CtModVerShort).implib</CtImpLib>
+    <CtDll>$(CtModVerShort).dll</CtDll>
+    <CtDistModIncFolderName>$(CtModName).$(CtModVerShort)</CtDistModIncFolderName>
+    <CtDistPrjIncFolderName>$(ProjectName)</CtDistPrjIncFolderName>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PreprocessorDefinitions Condition="'$(Configuration)'=='RTM'">CLU_RTM;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DebugInformationFormat Condition="'$(Configuration)'=='RTM'">None</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="CtDistDir">
+      <Value>$(CtDistDir)</Value>
+    </BuildMacro>
+    <BuildMacro Include="CtDistIncDir">
+      <Value>$(CtDistIncDir)</Value>
+    </BuildMacro>
+    <BuildMacro Include="CtDistLibDir">
+      <Value>$(CtDistLibDir)</Value>
+    </BuildMacro>
+    <BuildMacro Include="CtDistBinDir">
+      <Value>$(CtDistBinDir)</Value>
+    </BuildMacro>
+    <BuildMacro Include="CtDistSymDir">
+      <Value>$(CtDistSymDir)</Value>
+    </BuildMacro>
+    <BuildMacro Include="CtDistInterDir">
+      <Value>$(CtDistInterDir)</Value>
+    </BuildMacro>
+    <BuildMacro Include="CtModVerShort">
+      <Value>$(CtModVerShort)</Value>
+    </BuildMacro>
+    <BuildMacro Include="CtModVerLong">
+      <Value>$(CtModVerLong)</Value>
+    </BuildMacro>
+    <BuildMacro Include="CtProjectDir">
+      <Value>$(CtProjectDir)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="CtHeaderDir">
+      <Value>$(CtHeaderDir)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="CtGlobalDir">
+      <Value>$(CtGlobalDir)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="CtTargetName">
+      <Value>$(CtTargetName)</Value>
+    </BuildMacro>
+    <BuildMacro Include="CtLib">
+      <Value>$(CtLib)</Value>
+    </BuildMacro>
+    <BuildMacro Include="CtImpLib">
+      <Value>$(CtImpLib)</Value>
+    </BuildMacro>
+    <BuildMacro Include="CtDll">
+      <Value>$(CtDll)</Value>
+    </BuildMacro>
+    <BuildMacro Include="CtDistModIncFolderName">
+      <Value>$(CtDistModIncFolderName)</Value>
+    </BuildMacro>
+    <BuildMacro Include="CtDistPrjIncFolderName">
+      <Value>$(CtDistPrjIncFolderName)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>
